@@ -27,24 +27,16 @@ return [
         'enabled' => false,
         'path' => base_path('vendor/nwidart/laravel-modules/src/Commands/stubs'),
         'files' => [
-            'routes/web' => 'routes/web.php',
             'routes/api' => 'routes/api.php',
-            'views/index' => 'resources/views/index.blade.php',
-            'views/master' => 'resources/views/layouts/master.blade.php',
             'scaffold/config' => 'config/config.php',
             'composer' => 'composer.json',
-            'assets/js/app' => 'resources/assets/js/app.js',
-            'assets/sass/app' => 'resources/assets/sass/app.scss',
             'vite' => 'vite.config.js',
             'package' => 'package.json',
         ],
         'replacements' => [
-            'routes/web' => ['LOWER_NAME', 'STUDLY_NAME', 'KEBAB_NAME', 'MODULE_NAMESPACE', 'CONTROLLER_NAMESPACE'],
             'routes/api' => ['LOWER_NAME', 'STUDLY_NAME', 'KEBAB_NAME', 'MODULE_NAMESPACE', 'CONTROLLER_NAMESPACE'],
             'vite' => ['LOWER_NAME', 'STUDLY_NAME', 'KEBAB_NAME'],
             'json' => ['LOWER_NAME', 'STUDLY_NAME', 'KEBAB_NAME', 'MODULE_NAMESPACE', 'PROVIDER_NAMESPACE'],
-            'views/index' => ['LOWER_NAME'],
-            'views/master' => ['LOWER_NAME', 'STUDLY_NAME', 'KEBAB_NAME',],
             'scaffold/config' => ['STUDLY_NAME'],
             'composer' => [
                 'LOWER_NAME',
@@ -123,14 +115,14 @@ return [
             'exceptions' => ['path' => 'app/Exceptions', 'generate' => false],
             'jobs' => ['path' => 'app/Jobs', 'generate' => false],
             'helpers' => ['path' => 'app/Helpers', 'generate' => false],
-            'interfaces' => ['path' => 'app/Interfaces', 'generate' => false],
+            'interfaces' => ['path' => 'app/Interfaces', 'generate' => true],
             'listener' => ['path' => 'app/Listeners', 'generate' => false],
             'model' => ['path' => 'app/Models', 'generate' => false],
             'notifications' => ['path' => 'app/Notifications', 'generate' => false],
             'observer' => ['path' => 'app/Observers', 'generate' => false],
             'policies' => ['path' => 'app/Policies', 'generate' => false],
             'provider' => ['path' => 'app/Providers', 'generate' => true],
-            'repository' => ['path' => 'app/Repositories', 'generate' => false],
+            'repository' => ['path' => 'app/Repositories', 'generate' => true],
             'resource' => ['path' => 'app/Transformers', 'generate' => false],
             'route-provider' => ['path' => 'app/Providers', 'generate' => true],
             'rules' => ['path' => 'app/Rules', 'generate' => false],
@@ -155,9 +147,9 @@ return [
             'lang' => ['path' => 'lang', 'generate' => false],
 
             // resource/
-            'assets' => ['path' => 'resources/assets', 'generate' => true],
+            'assets' => ['path' => 'resources/assets', 'generate' => false],
             'component-view' => ['path' => 'resources/views/components', 'generate' => false],
-            'views' => ['path' => 'resources/views', 'generate' => true],
+            'views' => ['path' => 'resources/views', 'generate' => false],
 
             // routes/
             'routes' => ['path' => 'routes', 'generate' => true],
