@@ -30,7 +30,7 @@ class AuthRepository implements AuthInterface
 
     public function login(object $data)
     {
-        if (!Auth::attempt($data)) {
+        if (!Auth::attempt((array)$data)) {
             return response()->json([
                 'message' => 'Invalid login credentials.',
             ], 401);
