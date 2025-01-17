@@ -1,10 +1,10 @@
 {
-    "name": "nwidart/auth",
+    "name": "fmeroj/auth",
     "description": "",
     "authors": [
         {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
+            "name": "Fozilov Meroj",
+            "email": "fozilovmerodz@gmail.com"
         }
     ],
     "extra": {
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Modules\\Auth\\": "app/",
+            "Modules\\Auth\\": "App/",
             "Modules\\Auth\\Database\\Factories\\": "database/factories/",
             "Modules\\Auth\\Database\\Seeders\\": "database/seeders/"
         }
