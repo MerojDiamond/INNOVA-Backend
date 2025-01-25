@@ -19,17 +19,23 @@ class AuthController extends Controller
         $this->repository = $repository;
     }
 
-    public function register(RegisterRequest $request){
+    public function register(RegisterRequest $request)
+    {
         return $this->repository->register((object)$request->validated());
     }
 
-    public function login(LoginRequest $request){
+    public function login(LoginRequest $request)
+    {
         return $this->repository->login((object)$request->validated());
     }
-    public function logout(Request $request){
-        return $this->repository->logout();
+
+    public function logout(Request $request)
+    {
+        return $this->repository->logout($request);
     }
-    public function resetPassword(ResetPasswordRequest $request){
+
+    public function resetPassword(ResetPasswordRequest $request)
+    {
         return $this->repository->resetPassword((object)$request->validated());
     }
 }

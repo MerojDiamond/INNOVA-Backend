@@ -3,6 +3,7 @@
 namespace Modules\Auth\Repositories;
 
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Modules\Auth\Interfaces\AuthInterface;
@@ -48,9 +49,9 @@ class AuthRepository implements AuthInterface
         ]);
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
-        request()->user()->currentAccessToken()->delete();
+        $request->user()->currentAccessToken()->delete();
 
         return response()->json([
             'message' => 'Logged out successfully!',
