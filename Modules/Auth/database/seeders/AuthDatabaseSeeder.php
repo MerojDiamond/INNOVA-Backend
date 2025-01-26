@@ -6,11 +6,10 @@ use Illuminate\Database\Seeder;
 
 class AuthDatabaseSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        // $this->call([]);
+//        $this->call(PermissionsSeeder::class);
+        $this->call(RolesSeeder::class);
+        $this->call(AdminSeeder::class);
     }
 }
