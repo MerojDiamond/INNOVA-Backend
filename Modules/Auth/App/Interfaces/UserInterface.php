@@ -1,8 +1,8 @@
 <?php
 
-namespace $CLASS_NAMESPACE$;
+namespace Modules\Auth\Interfaces;
 
-interface $CLASS$
+interface UserInterface
 {
     public function index($options);
 
